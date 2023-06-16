@@ -6,8 +6,8 @@ class GetGifs {
 
   Future getgifs(String pesquisa) async {
     try {
-      Response response = await dio
-          .get('api.giphy.com/v1/gifs/search?api_key=$nome&q=$pesquisa');
+      Response response = await dio.get(
+          'https://api.giphy.com/v1/gifs/search?api_key=$nome&q=$pesquisa');
       List<String> listgifs = [];
       print(response.data);
 
